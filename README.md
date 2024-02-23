@@ -32,3 +32,10 @@ We create a APIService for the same service.
 We create a rbac cluster role to watch and list pods in the cluster.
 We create a rbac cluster role binding that binds the service account of the metric server to the cluster role created above.
 This is required for the informer to work.
+
+## 6_allow_hpa_to_access_custom_metric
+
+We create a rbac  cluster role that allows kubernetes resources to read our metric value.
+We create a rbac cluster role binding that binds the service account 'horizontal-pod-autoscaler' of the 'kube-system' namespace to the cluster role created above.
+**This allows the Horizontal Pod Autoscaler to read our custom metrics.**
+We also bind the system:auth-delegator cluster role to our custom metric servers service account.

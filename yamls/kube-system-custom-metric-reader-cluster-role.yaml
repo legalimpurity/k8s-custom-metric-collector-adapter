@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kube-system-custom-metric-reader-cluster-role
+rules:
+- apiGroups:
+  - external.metrics.k8s.io
+  resources:
+  - "custom-metric"
+  verbs:
+  - "GET"
