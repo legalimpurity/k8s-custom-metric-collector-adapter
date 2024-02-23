@@ -21,3 +21,9 @@ Informer is used the get the IP's of pod current running under the deployment. T
 The metric collector goes to the endpoints of all the application pods every 5 seconds, sums up there metric values from all the pods and exposes it through the external metric routes.
 The app runs an express server that exposes the endpoints in the format expected by kubernetes-api-server for custom metrics.
 
+## 4_setup_custom_metric_server_service_service_account_deployemt_api_service
+
+We create a service account for the custom-metric-server.
+We create a deployment and a service for the same server.
+We create a APIService for the same service.
+
