@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-metric-server-deployment
+  labels:
+    app: custom-metric-server
+  namespace: custom-metrics-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-metric-server
+  template:
+    metadata:
+      labels:
+        app: custom-metric-server
+    spec:
+      serviceAccountName: custom-metric-server-service-account
+      containers:
+      - name: custom-metric-server
+        image: custom-metric-server:1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
