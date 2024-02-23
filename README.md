@@ -27,3 +27,8 @@ We create a service account for the custom-metric-server.
 We create a deployment and a service for the same server.
 We create a APIService for the same service.
 
+## 5_metric_server_list_watch_application_pods
+
+We create a rbac cluster role to watch and list pods in the cluster.
+We create a rbac cluster role binding that binds the service account of the metric server to the cluster role created above.
+This is required for the informer to work.
