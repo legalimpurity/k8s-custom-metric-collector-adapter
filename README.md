@@ -39,3 +39,7 @@ We create a rbac  cluster role that allows kubernetes resources to read our metr
 We create a rbac cluster role binding that binds the service account 'horizontal-pod-autoscaler' of the 'kube-system' namespace to the cluster role created above.
 **This allows the Horizontal Pod Autoscaler to read our custom metrics.**
 We also bind the system:auth-delegator cluster role to our custom metric servers service account.
+
+## 7_add_hpa_using_our_custom_metric_to_scale_deployment
+
+We finally add our HPA which uses the custom metrics to scale our application.
