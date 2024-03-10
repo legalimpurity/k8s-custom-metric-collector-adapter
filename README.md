@@ -1,4 +1,8 @@
-> This repository is demo code for a talk that I gave at EPAM Systems, Gurugram as part of the event Kloud Konnect by Cloud Native Gurugram. You can find more about the event [here](https://www.linkedin.com/posts/cncf-gurugram_kloudkonnect-cloudnative-techevent-activity-7165359268571832320-INgY).
+> This repository is demo code for a talk that I gave at EPAM Systems, Gurugram on 24th Feb 2024 as part of the event Kloud Konnect by Cloud Native Gurugram. You can find more about the event [here](https://www.linkedin.com/posts/cncf-gurugram_kloudkonnect-cloudnative-techevent-activity-7165359268571832320-INgY).
+>
+> You can find the presentation for the talk in the ppt folder.
+>
+> You can use the the Pull Requests to see as the code progresses and the application gets read.
 
 # k8s-custom-metric-collector-adapter
 
