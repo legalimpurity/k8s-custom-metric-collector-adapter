@@ -1,3 +1,9 @@
+> This repository is demo code for a talk that I gave at EPAM Systems, Gurugram on 24th Feb 2024 as part of the event Kloud Konnect by Cloud Native Gurugram. You can find more about the event [here](https://www.linkedin.com/posts/cncf-gurugram_kloudkonnect-cloudnative-techevent-activity-7165359268571832320-INgY).
+>
+> You can find the presentation for the talk in the ppt folder.
+>
+> You can use the the Pull Requests to see as the code progresses and the application gets read.
+
 # k8s-custom-metric-collector-adapter
 
 ## 1_add_custom_metric_app
@@ -16,7 +22,7 @@ We create a service pointing towards the pods with label of our deployment.
 
 We create a new custom metric server and setup its Dockerfile.
 The app runs on https as kubernetes-api-server can only access endpoints on https.
-The app uses the [official client library from kubernetes][https://github.com/kubernetes-client/javascript] for javascript to use a feature known as Informer. 
+The app uses the [official client library from kubernetes](https://github.com/kubernetes-client/javascript) for javascript to use a feature known as Informer. 
 Informer is used the get the IP's of pod current running under the deployment. This is required for metric collection from application pods.
 The metric collector goes to the endpoints of all the application pods every 5 seconds, sums up there metric values from all the pods and exposes it through the external metric routes.
 The app runs an express server that exposes the endpoints in the format expected by kubernetes-api-server for custom metrics.
